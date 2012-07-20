@@ -1,6 +1,5 @@
 from sys import stdout as ss
 import locale
-import lxml.etree
 
 def print_r(s):
     ss.write("%s \r" % (" " * 50))
@@ -13,7 +12,4 @@ def truncate(s):
 def format_number(n):
     locale.setlocale(locale.LC_ALL, '')
     return locale.format("%d", n, 1)
-
-def get_xml(s):
-    return lxml.etree.fromstring(s)
 
